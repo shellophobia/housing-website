@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+	MakeUber
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset = "UTF-8">
+<link rel ="stylesheet" href="css/bootstrap.min.css">
+<link rel ="stylesheet" href="css/style.css">
+<script src = "js/jquery.js" type="text/javascript"></script>
+<script src ="js/bootstrap.min.js" type="text/javascript"></script>
+<script src = "js/jquery.lazy.min.js" type="text/javascript"></script>
+<script src = "js/tilearrange.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+	.flip-container{
+		perspective:1000;
+	}
+	.flip-container:hover .flipper, .flip-container.hover .flipper{
+		transform : rotateY(180deg);
+	}
+	.flipper{
+		transition: 0.5s;
+		transform-style: preserve-3d;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+	.front, .back{
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.front{
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
+	.back{
+		transform: rotateY(180deg);
+	}
+</style>
+
+
+
+
+</head>
+<body style="font-family:'Ubuntu',sans-serif;font-size:15px;">
+
+<div class="container-fluid" id="wrapper" style="background-color:#ccddee; background-image:none;opacity:0.9">
+</div>
+
+<!-- ---------------------Header ------------------------------- -->
+<div id="header" class="container row">
+	<div id="logo" class="col-xs-2"><img src="Final_Logo.png" data-src="Final_Logo.png"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#logo img').lazy();
+		});
+	</script>
+	<div class="col-xs-8 col-xs-offset-2">
+	<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+	<div class="pull-right col-xs-8" style="padding:5px;text-align:center;background:#ccc;">
+		<strong>Contact Us @</strong>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+		<span class="icon-phone">+(91) 9900071655</span>
+	</div></div>
+	<div id="menu-bar">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+		        	<span class="sr-only">Toggle navigation</span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      		</button>
+		    	</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">How It Works</a></li>
+						<li><a href="#">Experts</a></li>
+						<li><a href="#">Ask</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div></div>
+</div>
+
+
+<!-- ---------------------MODAL ------------------------------- -->
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-title"><h3>Enter Your Contact Number</h3></div>
+			</div>
+			<div class="modal-body">
+				<span>Our correspondents will contact you on the number provided below within an hour so that you could fill us up with the details of the areas that you wish to be designed and be done with the negotiation.</span><br><br>
+				<div class="input-group input-modal">
+					<span class="input-group-addon icon-user"></span>
+					<input type="text" class="form-control" placeholder="Your Number"> 
+				</div><br>
+				<button type="button" class="btn btn-success">Proceed</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- ---------------------Main ------------------------------- -->
+<div class="alert-success info-box" style="margin-top:10px;">You can either choose the areas manually or <a href="#" data-toggle="modal" data-target="#contactModal">Click Here</a> to proceed telephonically</div>
+<div id="main" style="overflow:auto;overflow-y:hidden;white-space:nowrap;">
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Kitchen</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Wardrobes</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Sofas</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Beds</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Dining Tables</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Coffee Tables</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Corner Tables</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Crockery Units</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Dresser Mirrors</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">TV Units</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Bathroom</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">False Ceiling</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Lighting</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Wall Treatment</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Window Treatment</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Office Interior</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Landscape</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Garden</span>
+			</div>
+		</div>
+	</div>
+	<div class="tile tile_bg flip-container">
+		<div class = "flipper">
+			<img class="front">
+			<div class="back">
+				<span class="tile_text">Flooring</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<a class="front-button col-sm-2 col-sm-offset-5" href="#" style="text-align:center;text-decoration:none;margin-top:7px;height:auto;">
+		Choose Design Type
+	</a>
+</div>
+
+
+<!-- ---------------------Footer ------------------------------- -->
+<div id="footer" class="row" style="margin-top:30px;">
+	<div class="col-sm-3" style="font-size:25pt;padding:20px;">
+		<span class="icon-facebook">&nbsp;</span>
+		<span class="icon-googleplus">&nbsp;</span>
+		<span class="icon-twitter">&nbsp;</span>
+	</div>
+	<div class="col-sm-6" style="text-align:center;">
+		<span style="font-size:20px;font-family: 'Yanone Kaffeesatz', sans-serif;">Choose Your Expert II Take Inspirations II Ask for Advice II Talk to fellow Home Owners II Upload Your Creative Ideas II Start Your Project
+		<br>Make Your Spaces the "Uber" Way</span>
+	</div>
+	<div class="col-sm-3" style="font-size:15px;">
+		<p><strong>Contact Us @</strong><br>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;<br>
+		<span class="icon-phone">+(91) 9900071655</span></p>
+	</div>
+	<div class="col-sm-12">
+		<hr style="border:1px solid #111;margin-bottom:10px;">
+	</div>
+	<div class="col-sm-10">
+		<ul class="footer-menu">
+			<li><a href="makeuber.html">Home</a></li>
+			<li><a href="howitworks.html">How It Works</a></li>
+			<li><a href="#">Experts</a></li>
+			<li><a href="ask.html">Ask</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="register.html">Register</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2">
+		<strong>&copy; 2014 | <a href="#">Privacy Policy</a></strong>
+	</div>
+</div>
+
+</body>
+</html>

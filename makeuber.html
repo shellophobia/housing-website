@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+	MakeUber
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset = "UTF-8">
+<link rel ="stylesheet" href="css/bootstrap.min.css">
+<link rel ="stylesheet" href="css/style.css">
+<link rel ="stylesheet" href="css/font-awesome.min.css">
+<script src = "js/jquery.js" type="text/javascript"></script>
+<script src ="js/bootstrap.min.js" type="text/javascript"></script>
+<script src = "js/display.js" type="text/javascript"></script>
+<script src = "js/jquery.lazy.min.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+</head>
+<body style="font-family:'Ubuntu',sans-serif;font-size:15px;">
+
+<div class="container-fluid" id="wrapper">
+</div>
+
+<!-- ---------------------Header ------------------------------- -->
+<div id="header" class="container row">
+	<div class="col-sm-4"><img src="Final_Logo.png" data-src="Final_Logo.png"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#logo img').lazy();
+		});
+	</script>
+	<div class="col-sm-8">
+	<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+	<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+		<strong>Contact Us @</strong>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+		<span class="icon-phone">+(91) 9900071655</span>
+	</div>
+	</div>
+	<div id="menu-bar">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+		        	<span class="sr-only">Toggle navigation</span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      		</button>
+		    	</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">How It Works</a></li>
+						<li><a href="#">Experts</a></li>
+						<li><a href="#">Ask</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div></div>
+</div>
+
+
+<!-- --------------------- FAKE HEADER --------------------------- -->
+<div id="fake-header" class="container">
+	<div class="row">
+		<div class="col-sm-4"><img height="50px" src="Final_Logo.png" data-src="Final_Logo.png"></div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#logo img').lazy();
+			});
+		</script>
+		<div class="col-sm-8">
+			<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+				<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+					<strong>Contact Us @</strong>
+					<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+					<span class="icon-phone">+(91) 9900071655</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="header-navigator" style="padding:10px 2px 5px 10px;display:none;">
+		<hr style="border-top:1px solid #efefef;margin-bottom:10px;">
+		<a id="top" style="color:#fff;text-decoration:none;">^ To the Top</a>
+		<ul id="navigator" style="display:inline;width:50vw;margin-left:23vw;">
+			<li><a class="anchor" style="text-decoration:none;" data-target="#customer-proj">Customer Stories</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#expertcorner">Our Experts</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#blog-contri">Our Blogs</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#overview">Our Guarantee</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- ---------------------MODAL ------------------------------- -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-title"><h2>Login</h2></div>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#" role="tab" data-toggle="tab">Users</a></li>
+					<li><a role="tab" data-toggle="tab">Experts</a></li>
+				</ul>
+				<br>
+				<div class="tab-content">
+					<div class="tab-pane fade in active">
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-user"></span>
+							<input type="text" class="form-control" placeholder="Username"> 
+						</div>
+						<br>
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-lock"></span>
+							<input type="password" class="form-control" placeholder="Password"> 
+						</div><br>
+					<button type="button" class="btn btn-success">Sign In</button>
+					</div>
+					<div class="tab-pane fade"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				Or connect with <br><br>
+		        <button type="button" class="btn btn-primary">Facebook</button>
+		        <button type="button" class="btn btn-primary">Google</button>
+		        <button type="button" class="btn btn-primary">Twitter</button>
+      		</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- ---------------------Main ------------------------------- -->
+
+<div id = "main" style="height:511px;overflow-x:hidden;">
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-2">
+			<h2 style="text-shadow:0.7px 0.7px 0.7px #efefef"> Tell us about your project </h2><br>
+			<input type="text" class="form-control" placeholder="Name of the Apartment/Villa/Residence/Office/Others:"><br>
+			<input type="text" class="form-control" placeholder="Enter Your Budget"><br>
+			<input type="text" class="form-control" placeholder="Your Name"><br>
+			<div class="btn-group" id="mydropdown" style="margin-bottom:20px;">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span>Choose Your Expert</span> &nbsp;&nbsp;&nbsp;<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="experts" href="#">Choose Your Expert</a></li>
+					<li><a class="experts" href="#">Architect</a></li>
+					<li><a class="experts" href="#">Interior Designers</a></li>
+					<li><a class="experts" href="#">Contractors</a></li>
+					<li><a class="experts" href="#">Tiles &amp; Stones</a></li>
+					<li><a class="experts" href="#">Wallpapers</a></li>
+				</ul>
+			</div>
+			<textarea class="form-control" rows = "4" cols = "60" placeholder="Describe Your project"></textarea>
+		</div>
+		<div class="col-sm-5 col-sm-offset-1">
+			<a class = "front-button sharereq" href="startproj.html" style="text-decoration:none;">
+				<span><span class ="icon-users">&nbsp;</span>Share Your Requirements</span>
+			</a>
+		</div>
+	</div>
+	<div class="row" style="color:#fff;margin-top:50px;">
+		<hr>
+		<ul id="navigator" style="width:50vw;margin-left:30vw;margin-top:10px;">
+			<li><a class="anchor" style="text-decoration:none;" data-target="#customer-proj">Customer Stories</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#expertcorner">Our Experts</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#blog-contri">Our Blogs</a></li>&nbsp;|&nbsp;
+			<li><a class="anchor" style="text-decoration:none;" data-target="#overview">Our Guarantee</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- --------------------Customer Experience ------------------ -->
+
+<div id="customer-proj" class="row content-page"><br><br><br><br>
+	<p class="text-center" style="font-size:28px;font-family: 'Yanone Kaffeesatz', sans-serif;color:#663300;">OUR CUSTOMER STORIES</p>
+	<div class="row cust-story-wrapper">
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust1.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust2.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust3.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="row cust-story-wrapper">
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust4.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust5.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+		<div class="panel panel-danger cust-story">
+			<div class="panel-body">
+				<img src="Images/Cust_story/cust6.jpg" class="panel-img">
+				<blockquote>
+  					<p>Story Title Goes Here</p>
+  					<footer>Posted By : <cite title="Source Title">Customer Name</cite><br>On Date</footer>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br>
+</div>
+<hr>
+
+<!-- -------------------- Makeuber Experts --------------- -->
+
+<div id="expertcorner" class="row content-page" style="padding-left:60px;"><br><br><br><br>
+	<p class="text-center" style="font-size:28px;font-family: 'Yanone Kaffeesatz', sans-serif;color:#663300;">OUR EXPERTS</p>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div class="expert-info flip-container">
+		<div class="flipper">
+			<img src="" class="front">
+			<div class="back">
+				Expert Name<br>
+				Expert Category<br>
+				<a href="#">Read More..</a>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;"><br><br><br><br></div>
+</div>
+<hr>
+
+<!-- -----------------------Blogs ----------------- -->
+
+<div id="blog-contri" class="row content-page" style="padding-left:80px;">
+	<br><br><br><br>
+	<p class="text-center" style="font-size:28px;font-family: 'Yanone Kaffeesatz', sans-serif;color:#663300;">FOLLOW OUR BLOGS</p>
+	<p style="font-size:20px;font-family: 'Yanone Kaffeesatz', sans-serif;color:#663300;">Follow Our Insightful Blogs Written By Our Experts</p><br>
+	<div class="row">
+		<div class="panel panel-primary col-sm-5">
+			<div class="panel-body">
+				<img src="Images/blog_prev1.jpg" width="100%" height="220px">
+				<blockquote>
+	  				<p>Wall treatments – why, how and what?</p>
+	  				<footer>Posted By : <cite title="Source Title">Kruthika Ramesh, Interior Designer</cite></footer>
+				</blockquote>
+				<p>We all love wallpapers and fancy backdrops around us, don’t we? Wall treatments are good looking add-ons that give a new look to a space. Wall Treatments can be chosen between a “permanent” and a “temporary” one. We would always suggest a temporary wall treatment  for rented spaces as it would cost you lesser than a permanent one, and would be easy for the owner to take it off.
+				</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+		<div class="panel panel-primary col-sm-5 col-sm-offset-1">
+			<div class="panel-body">
+				<img src="Images/blog_prev2.jpg" width="100%" height="220px">
+				<blockquote>
+	  				<p>Wall treatments – why, how and what?</p>
+	  				<footer>Posted By : <cite title="Source Title">Kruthika Ramesh, Interior Designer</cite></footer>
+				</blockquote>
+				<p>PERMANENT WALL TREATMENTS :
+				Permanent Wall Treatments are broadly classified so since they would not just need installation on to the existing wall, but might require some breakage too. This treatment for the walls can be carried out in various ways, Stone cladding, Exposed brick/concrete and Wood Panelling are a few of them.
+				</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-primary col-sm-5">
+			<div class="panel-body">
+				<img src="Images/blog_prev3.jpg" width="100%" height="220px">
+				<blockquote>
+	  				<p>Wall treatments – why, how and what?</p>
+	  				<footer>Posted By : <cite title="Source Title">Kruthika Ramesh, Interior Designer</cite></footer>
+				</blockquote>
+				<p>Stone Cladding Wall Treatment  :  This wall treatment would be a one-time investment considering its cost and installation time.  Stone cladding could be done at specific places just as highlights or maybe on large walls which would look too empty at completion.  A variety of stones are available in the market that can be used for cladding purposes.
+				</p>
+				<a href="#">Read More</a>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br>
+</div>
+<hr>
+
+<!-- ------------------------- Motto ------------------ -->
+
+<div id="overview" class="row content-page"><br><br><br><br>
+	<p class="text-center" style="font-size:36px;font-family: 'Yanone Kaffeesatz', sans-serif;color:#663300;">OUR GUARANTEE</p><br>
+	<div class="overview-wrap">
+		<i class="fa fa-quote-left"></i>
+		<div class="overview-content">
+			We understand the importance of your home in your life. Thats why we help you find the right expert who understands you and your needs. And ,at any point of time ,if you feel the expert is not right for you , we will connect you with another expert - without making any difference to your wallet.
+		</div>
+	</div>
+</div>
+
+
+<!---------------------------FEEDBACK ----------------- -->
+<div class="feedback">
+	<div id="icon">
+		<a href="#" style="text-decoration:none;">Feedback</a>
+	</div>
+	<div id="feed-content"><div id="fas">
+		<button type="button" id="feed-close" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4>Your Feedback</h4><hr><br>
+		<input type="text" class="form-control" placeholder="Your Name"><br>
+		<input type="email" class="form-control" placeholder="Your Email"><br>
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a role="tab" data-toggle="tab">Problem</a></li>
+			<li><a role="tab" data-toggle="tab">Suggestion</a></li>
+			<li><a role="tab" data-toggle="tab">Compliment</a></li>
+			<li><a role="tab" data-toggle="tab">Other</a></li>
+		</ul><br>
+		<div class="tab-content">
+			<div class="tab-pane fade in active">
+				<textarea class="form-control" placeholder="Please Enter Your Feedback and press submit"></textarea>
+			</div>
+		</div>
+		<br>
+		<button class="btn btn-success" type="button">Submit Feedback</button>
+	</div></div>
+</div>
+
+<!-- ---------------------Footer ------------------------------- -->
+<div id="footer" class="row">
+	<div class="col-sm-3" style="font-size:25pt;padding:20px;">
+		<span class="icon-facebook">&nbsp;</span>
+		<span class="icon-googleplus">&nbsp;</span>
+		<span class="icon-twitter">&nbsp;</span>
+	</div>
+	<div class="col-sm-6" style="text-align:center;">
+		<span style="font-size:20px;font-family: 'Yanone Kaffeesatz', sans-serif;">Choose Your Expert II Take Inspirations II Ask for Advice II Talk to fellow Home Owners II Upload Your Creative Ideas II Start Your Project
+		<br>Make Your Spaces the "Uber" Way</span>
+	</div>
+	<div class="col-sm-3" style="font-size:15px;">
+		<p><strong>Contact Us @</strong><br>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;<br>
+		<span class="icon-phone">+(91) 9900071655</span></p>
+	</div>
+	<div class="col-sm-12">
+		<hr style="border:1px solid #111;margin-bottom:10px;">
+	</div>
+	<div class="col-sm-10">
+		<ul class="footer-menu">
+			<li class="active"><a href="makeuber.html">Home</a></li>
+			<li><a href="howitworks.html">How It Works</a></li>
+			<li><a href="#">Experts</a></li>
+			<li><a href="ask.html">Ask</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="register.html">Register</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2">
+		<strong>&copy; 2014 | <a href="#">Privacy Policy</a></strong>
+	</div>
+</div>
+
+</body>
+</html>

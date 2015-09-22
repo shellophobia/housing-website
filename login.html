@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Header</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset = "UTF-8">
+	<link rel ="stylesheet" href="css/bootstrap.min.css">
+	<script src = "js/jquery.js" type="text/javascript"></script>
+	<script src ="js/bootstrap.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script src = "js/jquery.lazy.min.js" type="text/javascript"></script>
+	<style type="text/css">
+		body{
+			background: #cecece;
+		}
+		.feedback{
+			height: 50vh;
+			width: 38vw;
+			position: fixed;
+			top:35%;
+			right:-30%;
+			border-radius: 5px;
+			z-index: 1000;
+		}
+		#icon { 
+		  float: left;
+		  height: 104px; 
+		  width: 104px; 
+		  margin-top: 110px;
+		  transform: rotate(-90deg);
+		  -webkit-transform: rotate(-90deg); 
+		  -moz-transform: rotate(-90deg); 
+		  -o-transform: rotate(-90deg); 
+		  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		}
+
+		#icon a { 
+		  background:#FF777E;
+		  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+		  border-radius:3px; 
+		  height: 35px; 
+		  float: right;
+		  width: 90px; 
+		  color: #fff; 
+		  padding:5px;
+		  margin-top: 66px;
+		  font-family: Arial, sans-serif; 
+		  font-size: 17px; 
+		  font-weight: bold; 
+		  text-decoration: none; 
+		  border-bottom: solid 1px #333;
+		  border-left: solid 1px #333;
+		  border-right: solid 1px #fff;
+		}
+
+		#icon a:hover { 
+		  	background:#FF444E;
+		}
+
+		#feed-content{
+			float:left;
+			background:#fff;
+			border-radius: 4px;
+			box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+		}
+		#fas{
+			padding:20px;
+		}
+		.blur{
+			position: fixed;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background:#111;
+			opacity: 0.5;
+			z-index: 500;
+		}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.feedback').data('hidden','false');
+		$('#icon a').on('click',function(e){
+			e.preventDefault();
+			if($('.feedback').data('hidden')=='false'){
+				$('.feedback').animate({right:'0%'},1000);
+				$('.feedback').data('hidden','true');
+				$('body').append($('<div class="blur"></div>'));
+			}
+			else{
+				$('.feedback').animate({right:'-30%'},1000);
+				$('.feedback').data('hidden','false');
+				$('.blur').remove();
+			}
+		});
+		$('#feed-close').on('click',function(e){
+			e.preventDefault();
+			if($('.feedback').data('hidden')=='true'){
+				$('.feedback').animate({right:'-30%'},1000);
+				$('.feedback').data('hidden','false');
+				$('.blur').remove();
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+<div class="container row">
+	<div class="feedback">
+		<div id="icon">
+			<a href="#" style="text-decoration:none;">Feedback</a>
+		</div>
+		<div id="feed-content"><div id="fas">
+			<button type="button" id="feed-close" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			<h4>Your Feedback</h4><hr><br>
+			<input type="text" class="form-control" placeholder="Your Name"><br>
+			<input type="email" class="form-control" placeholder="Your Email"><br>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a role="tab" data-toggle="tab">Problem</a></li>
+				<li><a role="tab" data-toggle="tab">Suggestion</a></li>
+				<li><a role="tab" data-toggle="tab">Compliment</a></li>
+				<li><a role="tab" data-toggle="tab">Other</a></li>
+			</ul><br>
+			<div class="tab-content">
+				<div class="tab-pane fade in active">
+					<textarea class="form-control" placeholder="Please Enter Your Feedback and press submit"></textarea>
+				</div>
+			</div>
+			<br>
+			<button class="btn btn-success" type="button">Submit Feedback</button>
+		</div></div>
+	</div>
+	
+</div>
+</body>
+</html>

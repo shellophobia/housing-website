@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+	MakeUber
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset = "UTF-8">
+<link rel ="stylesheet" href="css/bootstrap.min.css">
+<link rel ="stylesheet" href="css/style.css">
+<link rel ="stylesheet" href="css/font-awesome.min.css">
+<script src = "js/jquery.js" type="text/javascript"></script>
+<script src ="js/bootstrap.min.js" type="text/javascript"></script>
+<script src = "js/jquery.lazy.min.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	#wrapper{
+		background: #ccddee;
+	}
+	.usr-img{
+		padding-left: 50px;
+		padding-top:5px;
+	}
+	.user-comments .comment-data{
+		min-height: 80px;
+		background:#cecece;
+		padding:5px;
+	}	
+	.user-comments{
+		margin-top: 10px;
+	}
+
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(function(){
+			$('#header').data('size','big');
+		});
+		$('.feedback').data('hidden','false');
+		$('#icon a').on('click',function(e){
+			e.preventDefault();
+			if($('.feedback').data('hidden')=='false'){
+				$('.feedback').animate({right:'0%'},1000);
+				$('.feedback').data('hidden','true');
+				$('body').append($('<div class="blur"></div>'));
+			}
+			else{
+				$('.feedback').animate({right:'-32.7%'},1000);
+				$('.feedback').data('hidden','false');
+				$('.blur').remove();
+			}
+		});
+		$('#feed-close').on('click',function(e){
+			e.preventDefault();
+			if($('.feedback').data('hidden')=='true'){
+				$('.feedback').animate({right:'-32.7%'},1000);
+				$('.feedback').data('hidden','false');
+				$('.blur').remove();
+			}
+		});
+		$(window).scroll(function(e){
+			var headerHeight = $('#header').height();
+
+			if($(this).scrollTop() > headerHeight){
+				if($('#header').data('size') == 'big'){
+					$('#header').hide();
+					$('#fake-header').slideDown('2000');
+					$('#header').data('size','small');
+				}
+			}
+			else{
+				if($('#header').data('size') == 'small'){
+					$('#fake-header').hide();
+					$('#header').slideDown('2000');
+					$('#header').data('size','big');
+				}
+			}
+		});
+	});
+</script>
+
+</head>
+<body style="font-family:'Ubuntu',sans-serif;font-size:15px;">
+
+<div class="container-fluid" id="wrapper">
+</div>
+
+<!-- ---------------------Header ------------------------------- -->
+<div id="header" class="container row">
+	<div class="col-sm-4"><img src="Final_Logo.png" data-src="Final_Logo.png"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#logo img').lazy();
+		});
+	</script>
+	<div class="col-sm-8">
+	<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+	<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+		<strong>Contact Us @</strong>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+		<span class="icon-phone">+(91) 9900071655</span>
+	</div>
+	</div>
+	<div id="menu-bar">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+		        	<span class="sr-only">Toggle navigation</span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      		</button>
+		    	</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">How It Works</a></li>
+						<li><a href="#">Experts</a></li>
+						<li><a href="#">Ask</a></li>
+						<li class="active"><a href="#">Blog</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div></div>
+</div>
+
+
+<!-- --------------------- FAKE HEADER --------------------------- -->
+<div id="fake-header" class="container">
+	<div class="row">
+		<div class="col-sm-4"><img height="50px" src="Final_Logo.png" data-src="Final_Logo.png"></div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#logo img').lazy();
+			});
+		</script>
+		<div class="col-sm-8">
+			<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+				<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+					<strong>Contact Us @</strong>
+					<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+					<span class="icon-phone">+(91) 9900071655</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ---------------------MODAL ------------------------------- -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-title"><h2>Login</h2></div>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#" role="tab" data-toggle="tab">Users</a></li>
+					<li><a role="tab" data-toggle="tab">Experts</a></li>
+				</ul>
+				<br>
+				<div class="tab-content">
+					<div class="tab-pane fade in active">
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-user"></span>
+							<input type="text" class="form-control" placeholder="Username"> 
+						</div>
+						<br>
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-lock"></span>
+							<input type="password" class="form-control" placeholder="Password"> 
+						</div><br>
+					<button type="button" class="btn btn-success">Sign In</button>
+					</div>
+					<div class="tab-pane fade"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				Or connect with <br><br>
+		        <button type="button" class="btn btn-primary">Facebook</button>
+		        <button type="button" class="btn btn-primary">Google</button>
+		        <button type="button" class="btn btn-primary">Twitter</button>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!-- ---------------------MAIN ------------------------------- -->
+<div id="main" class="row container" style="padding:10px;height:auto;">
+	<div class="col-sm-3 col-sm-push-9" style="background:#ccc;height:auto;padding:10px;">
+		<div class="input-group">
+			<input type="text" class="form-control" name="search" placeholder = "Search">
+			<span class="input-group-addon"><i class="fa fa-search"></i></span>
+		</div>
+		<div>
+			<h4>Browse by Category</h4>
+			<a href="#">Kitchens</a> | <a href="#">Wall Treatments</a> | <a href="#">Living Room</a> | <a href="#">Bedroom</a> | <a href="#">Terrace</a> | <a href="#">Bath</a>
+		</div>
+		<div>
+			<h4>Recent Posts</h4>
+			<a href="#">Wall treatments - why,how and what?</a>
+		</div>
+	</div>
+	<div class="col-sm-7 col-sm-pull-2" style="background:#ccc;height:auto;">
+		<h2>Wall treatments – why, how and what?</h2>
+
+		<p><b>-- Posted by : Kruthika Ramesh, Interior Designer    Category : Bath</b></p>
+
+		<p>We all love wallpapers and fancy backdrops around us, don’t we? Wall treatments are good looking add-ons that give a new look to a space. Wall Treatments can be chosen between a “permanent” and a “temporary” one. We would always suggest a temporary wall treatment  for rented spaces as it would cost you lesser than a permanent one, and would be easy for the owner to take it off.</p>
+
+		<p>Let us now read through Wall Treatments ,its types, and how we can choose them. Wall Treatments, as mentioned above are widely categorized into Permanent and Temporary ones.</p>
+
+		<b>PERMANENT WALL TREATMENTS :</b>
+
+		<p>Permanent Wall Treatments are broadly classified so since they would not just need installation on to the existing wall, but might require some breakage too. This treatment for the walls can be carried out in various ways, Stone cladding, Exposed brick/concrete and Wood Panelling are a few of them.</p>
+
+		<p><b>Stone Cladding Wall Treatment  : </b> This wall treatment would be a one-time investment considering its cost and installation time.  Stone cladding could be done at specific places just as highlights or maybe on large walls which would look too empty at completion.  A variety of stones are available in the market that can be used for cladding purposes. </p>
+		<p><b>Exposed Brick/Concrete Finish : </b>  The easiest way to bring about an exposed look is by avoiding the cement finish onto the wall.  Exposed wall finishes give a rusty/grunge look to a space.  It’s a perfect blend with being Modern, yet rustic. Exposed brick walls give a very comforting  feeling to the user. Also, not that you do get tiles that give a similar finish. These are mostly used  in smaller volumes so that they do not outcome the rest of the spaces.  There are temporary ways to get such finishes too. You will read about it further.</p>
+
+		<p><b>Wooden Panelling :</b> Wood panels take us back to the past, but in a rather contemporary manner. These panels can be arranged in a vertical or a horizontal manner, both giving the space a varied look.  These wooden panels always add character to a certain wall, giving us a variety of finshes to choose from. Let it be the lightest of the browns to the darkest, wood paneling surely gives your space a rather classy contemporary look. </p>
+		<p>Did we forget to tell you that you could create patterns and give your wall a 3-dimensional pattern with wood too???</p>
+		<b>TEMPORARY WALL TREATMENTS :</b>
+
+		<p>Temporary Wall Treatments are broadly classified so since they are easier to change and do not require any breakage at all. These just come as additions to your existing walls. These could be achieved by using wallpapers, wall paints, fabrics, mural works, tape-art, chalk-board finishes. We will now take you through a brief-up about these.</p>
+
+		<p><b>Wallpapers :</b> Wallpapers are an easy way to do up your walls. Its easy to install, reasonably priced and has a huge variety to choose from. We get textured wallpapers too, these add in character to the interior spaces, giving it a more “real-feel”. You can get an exposed brick/stone finish by just using a wallpaper if you want a temporary fixture. Wallpapers work best for themed-spaces due to the variety that comes within them. From colours to patterns, textures to glossy/matte finishes, graffiti to wall-arts, Wallpapers are a safe bet to add to existing walls. Care should be taken while choosing a wallpaper and installation processes.</p> 
+
+		<p>Doesn’t it put you in a fix to decide whether the brick texture is real or just a wallpaper???</p>
+
+		<p><b>Wall Paints :</b>  You could use the regular wall paints and make patterns and textures out of them too. Wallpaints can help you achieve a glossy/matte/textured/patterned finish. There are also wallpaints that you can write on, and its as easy as a white board to erase them off too. </p>
+		<p><b>Fabrics and Mural :</b> Fabrics and Murals do not exactly classify as a wall finish, but are a wall-décor type. Fabrics can be added as frames and art-work, whereas, mural art can be added as a small art-work onto the wall.</p>
+		<p>All the above mentioned are the commonly used Wall Finishes/Treatments that make your space look a lot livelier and classier. We hope we helped you enough in choosing the right one.</p>
+	</div>
+</div>
+
+<!-- -----------------COMMENT----------------------- -->
+<div style="width:100%;height:auto;">
+	<div class="comment-box row">
+		<div class="usr-img col-sm-1"><img src="" height="50px" width="50px"></div>
+		<div class="comment-data col-sm-10"><textarea class="form-control" cols="50" rows="3" placeholder="Write Your Comment Here"></textarea></div>
+	</div>
+	<a href="#" class="front-button" style="width:160px;height:44px;font-size:18px;text-decoration:none;margin:20px;"><i class="fa fa-comment-o"></i> Post Comment</a>
+	<div class="user-comments row">
+		<div class="usr-img col-sm-1"><img src="" height="50px" width="50px"></div>
+		<div class="comment-data col-sm-10"> Some Previous Comments</div>
+	</div>
+	<div class="user-comments row">
+		<div class="usr-img col-sm-1"><img src="" height="50px" width="50px"></div>
+		<div class="comment-data col-sm-10"> Some Previous Comments</div>
+	</div>
+	<div class="user-comments row">
+		<div class="usr-img col-sm-1"><img src="" height="50px" width="50px"></div>
+		<div class="comment-data col-sm-10"> Some Previous Comments</div>
+	</div>
+</div>
+
+
+<!---------------------------FEEDBACK ----------------- -->
+<div class="feedback">
+	<div id="icon">
+		<a href="#" style="text-decoration:none;">Feedback</a>
+	</div>
+	<div id="feed-content"><div id="fas">
+		<button type="button" id="feed-close" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4>Your Feedback</h4><hr><br>
+		<input type="text" class="form-control" placeholder="Your Name"><br>
+		<input type="email" class="form-control" placeholder="Your Email"><br>
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a role="tab" data-toggle="tab">Problem</a></li>
+			<li><a role="tab" data-toggle="tab">Suggestion</a></li>
+			<li><a role="tab" data-toggle="tab">Compliment</a></li>
+			<li><a role="tab" data-toggle="tab">Other</a></li>
+		</ul><br>
+		<div class="tab-content">
+			<div class="tab-pane fade in active">
+				<textarea class="form-control" placeholder="Please Enter Your Feedback and press submit"></textarea>
+			</div>
+		</div>
+		<br>
+		<button class="btn btn-success" type="button">Submit Feedback</button>
+	</div></div>
+</div>
+
+<!----------------------------FOOTER------------------- -->
+<div id="footer" class="row" style="margin-top:30px;">
+	<div class="col-sm-3" style="font-size:25pt;padding:20px;">
+		<span class="icon-facebook">&nbsp;</span>
+		<span class="icon-googleplus">&nbsp;</span>
+		<span class="icon-twitter">&nbsp;</span>
+	</div>
+	<div class="col-sm-6" style="text-align:center;">
+		<span style="font-size:20px;font-family: 'Yanone Kaffeesatz', sans-serif;">Choose Your Expert II Take Inspirations II Ask for Advice II Talk to fellow Home Owners II Upload Your Creative Ideas II Start Your Project
+		<br>Make Your Spaces the "Uber" Way</span>
+	</div>
+	<div class="col-sm-3" style="font-size:15px;">
+		<p><strong>Contact Us @</strong><br>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;<br>
+		<span class="icon-phone">+(91) 9900071655</span></p>
+	</div>
+	<div class="col-sm-12">
+		<hr style="border:1px solid #111;margin-bottom:10px;">
+	</div>
+	<div class="col-sm-10">
+		<ul class="footer-menu">
+			<li><a href="makeuber.html">Home</a></li>
+			<li><a href="howitworks.html">How It Works</a></li>
+			<li><a href="#">Experts</a></li>
+			<li><a href="ask.html">Ask</a></li>
+			<li class="active"><a href="blog.html">Blog</a></li>
+			<li><a href="register.html">Register</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2">
+		<strong>&copy; 2014 | <a href="#">Privacy Policy</a></strong>
+	</div>
+</div>
+
+</body>
+</html>

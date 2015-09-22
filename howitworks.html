@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+	MakeUber
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset = "UTF-8">
+<link rel ="stylesheet" href="css/bootstrap.min.css">
+<link rel ="stylesheet" href="css/style.css">
+<link rel ="stylesheet" href="css/font-awesome.min.css">
+<script src = "js/jquery.js" type="text/javascript"></script>
+<script src ="js/bootstrap.min.js" type="text/javascript"></script>
+<script src = "js/jquery-ui.min.js" type="text/javascript"></script>
+<script src = "js/jquery.lazy.min.js" type="text/javascript"></script>
+<script src = "js/howitworks.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	 #slide1{
+	 	background:linear-gradient(to bottom right,rgba(0,47,75,0.5),rgba(220,66,37,0.5)),url(Images/Slides/slide1.jpg);
+	 	background-size:100%;
+	 	background-position:center;
+	 	height:50vh; width:50vw;
+	 	margin-left:auto;margin-right:auto;
+	 	background-repeat:no-repeat;
+	 	color:#fff;
+	 	padding: 10px;
+	 }
+	 #slide2{
+	 	margin-left:auto;margin-right:auto;
+	 	height: 50vh;width: 80vw;
+	 }
+	 .slide-img{
+	 	height:240px;
+	 	padding: 10px;
+	 	text-align: center;
+	 }
+	 #make-1{
+	 	background:linear-gradient(to bottom right,rgba(0,47,75,0.5),rgba(220,66,37,0.5)),url(Images/Slides/experts.jpg);
+	 	background-size:100% 100%;
+	 	background-position:center;
+	 	background-repeat: no-repeat;
+	 }
+	 #make-2{
+	 	background:url(Images/Slides/rate-review.jpg);
+	 	background-size:100% 100%;
+	 	background-position:center;
+	 	background-repeat: no-repeat;
+	 }
+	 #make-3{
+	 	background:linear-gradient(to bottom right,rgba(0,47,75,0.5),rgba(9,213,232,0.5)),url(Images/Slides/social-interaction.jpg);
+	 	background-size:100% 100%;
+	 	background-position:center;
+	 	background-repeat: no-repeat;
+	 }
+	 #make-4{
+	 	background:linear-gradient(to bottom right,rgba(114,47,75,0.5),rgba(114,73,51,0.5)),url(Images/Slides/do-it-yourself.jpg);
+	 	background-size:100% 100%;
+	 	background-position:center;
+	 	background-repeat: no-repeat;
+	 }
+	 .make{
+	 	height:25vh;
+	 	color: #fff;
+	 	padding: 10px;
+	 	margin-top:10px;
+	 }
+	 #make-5{
+	 	background: url(Images/Slides/choose-expert.jpg);
+	 	height: 60vh;
+	 	width: 60vw;
+	 	color:#fff;
+	 	padding:20px;
+	 	margin-top:20px;
+	 	background-size: 100% 100%;
+	 	background-position: center;
+	 	background-repeat: no-repeat;
+	 	margin-left: auto;margin-right: auto;
+	 }
+	 
+</style>
+</head>
+<body style="font-family:'Ubuntu',sans-serif;font-size:15px;">
+
+<div class="container-fluid" id="wrapper" style="background:#cecece;">
+</div>
+
+<!-- ---------------------Header ------------------------------- -->
+<div id="header" class="container row">
+	<div class="col-sm-4"><img src="Final_Logo.png" data-src="Final_Logo.png"></div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#logo img').lazy();
+		});
+	</script>
+	<div class="col-sm-8">
+	<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+	<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+		<strong>Contact Us @</strong>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+		<span class="icon-phone">+(91) 9900071655</span>
+	</div>
+	</div>
+	<div id="menu-bar">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+		        	<span class="sr-only">Toggle navigation</span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      		</button>
+		    	</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li class="active"><a href="#">How It Works</a></li>
+						<li><a href="#">Experts</a></li>
+						<li><a href="#">Ask</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div></div>
+</div>
+
+
+<!-- --------------------- FAKE HEADER --------------------------- -->
+<div id="fake-header" class="container">
+	<div class="row">
+		<div class="col-sm-4"><img height="50px" src="Final_Logo.png" data-src="Final_Logo.png"></div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#logo img').lazy();
+			});
+		</script>
+		<div class="col-sm-8">
+			<div id="contacts" class="row" style="width:100%;height:40px;margin:5px;display:block;">
+				<div class="pull-right" style="padding:5px;text-align:center;background:#ccc;">
+					<strong>Contact Us @</strong>
+					<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;
+					<span class="icon-phone">+(91) 9900071655</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ---------------------MODAL ------------------------------- -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-title"><h2>Login</h2></div>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#" role="tab" data-toggle="tab">Users</a></li>
+					<li><a role="tab" data-toggle="tab">Experts</a></li>
+				</ul>
+				<br>
+				<div class="tab-content">
+					<div class="tab-pane fade in active">
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-user"></span>
+							<input type="text" class="form-control" placeholder="Username"> 
+						</div>
+						<br>
+						<div class="input-group input-modal">
+							<span class="input-group-addon icon-lock"></span>
+							<input type="password" class="form-control" placeholder="Password"> 
+						</div><br>
+					<button type="button" class="btn btn-success">Sign In</button>
+					</div>
+					<div class="tab-pane fade"></div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				Or connect with <br><br>
+		        <button type="button" class="btn btn-primary">Facebook</button>
+		        <button type="button" class="btn btn-primary">Google</button>
+		        <button type="button" class="btn btn-primary">Twitter</button>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<!--------------------- MAIN ------------------------ ---->
+<div id="main" class="row" style="height:auto;">
+	<div class="col-sm-10 col-sm-offset-1" style="background:#fff;height:250px;margin-top:30px;">
+	<h1>Banner Comes Here</h1>
+	</div>
+	<div id="animator" class="col-sm-10 col-sm-offset-1" style="background:#fff;margin-top:20px;min-height:100px;padding:20px;">
+		<button id="how" class="btn btn-default" style="margin-top:20px;">How Makeuber Works</button>
+		<div class="slides">
+			<div id="slide1" style="display:none;">
+				<h3 style="color:#7db9e8;display:none;">Let's Go on a Journey</h3>
+				<span style="display:none;">
+					Looking for an <br><b style="color:rgb(255,97,105);"> Interior Designer </b><br>to help me design interiors<br> for my new Flat!<br>
+				</span>
+				<button style="position:absolute;display:none;bottom:30px;left:43%;" class="btn btn-default">The Traditional Way</button>
+			</div>
+			<div id="slide2" style="height:auto;display:none;">
+				<div class="row">
+					<h3 style="display:none;">Traditional Channels</h3>
+					<div class="slide-img col-sm-4" style="display:none;"><img height="100%" width="100%" src="Images/Slides/google.jpg"><span style="font-size:18px;color:rgb(255,97,105);">Google It</span>
+					</div>
+					<div class="slide-img col-sm-4" style="display:none;"><img height="100%" width="100%"  src="Images/Slides/talk-to-friends.jpg">
+					<span style="font-size:18px;color:rgb(255,97,105);">Talk To Friends</span>
+					</div>
+					<div class="slide-img col-sm-4" style="display:none;"><img height="100%" width="100%" src="Images/Slides/word-of-mouth.jpg">
+					<span style="font-size:18px;color:rgb(255,97,105);">Word Of Mouth</span>
+					</div>
+					<button style="position:absolute;display:none;bottom:30px;left:43%;" class="next btn btn-default">Next</button>
+				</div>
+				<div class="row" style="display:none;">
+					<h3 style="display:none;">It's An Iceberg</h3>
+					<img src="Images/Slides/iceberg.jpg" height="130px" width="100px" style="display:none;"><br>
+					<div class="col-sm-3" style="display:none;">
+					<i class="fa fa-thumbs-down"></i>&nbsp;Too Expensive!
+					</div>
+					<div class="col-sm-3" style="display:none;"><i class="fa fa-thumbs-down"></i>&nbsp;Can't Trust with Materials!
+					</div>
+					<div class="col-sm-3" style="display:none;"><i class="fa fa-thumbs-down"></i>&nbsp;Not Convinced!
+					</div>
+					<div class="col-sm-3" style="display:none;"><i class="fa fa-thumbs-down"></i>&nbsp;Let's go ahead with the neighbourhood carpenter, At least he is inexpensive!
+					</div>
+					<button style="position:absolute;display:none;bottom:30px;left:43%;" class="next btn btn-default">Next</button>
+				</div>
+				<div class="row" style="display:none;">
+					<h3 style="display:none;">Post Engagement Experience - A Nightmare</h3>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Still No Trust of Material</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Delivery Not on Time</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Hassled Experience</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Have to Face Quality Issues</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Long Drawn Process</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1" style="padding:5px;display:none;">
+						<div class="alert alert-danger"><i class="fa fa-times"></i>&nbsp;Lack of Knowledge</div>
+					</div>
+					<button style="position:absolute;display:none;bottom:30px;left:43%;" class="btn btn-default">The MakeUber Way</button>
+				</div>
+				
+			</div>
+			<div id="slide3" style="display:none;">
+				<div class="row">
+					<h3 style="display:none;">Doing It "MakeUber" Way</h3>
+					<div class="col-sm-3 col-sm-offset-1 make" id="make-1" style="display:none;">Connect With Our Pool Of Experts</div>
+					<div class="col-sm-3 col-sm-offset-2 make" id="make-2" style="display:none;"></div>
+					<div class="col-sm-3 col-sm-offset-1 make" id="make-3" style="display:none;">Social Interaction With Peers &amp; Experts</div>
+					<div class="col-sm-3 col-sm-offset-2 make" id="make-4" style="display:none;">Do It Yourself Design</div>
+					<button style="position:absolute;display:none;bottom:30px;left:40%;" class="next btn btn-default">Next</button>
+				</div>
+				<div id="make-5" style="display:none;">
+					<h3 style="display:none;">We Help You Pick the Right Expert</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-10 col-sm-offset-1" style="margin-top:20px;background:#fff;">
+		<div class="row" style="padding:20px;">
+			<h3>Join the Discussion</h3>
+			<i>"Intuit .. Ideate .. Connect &amp; Accomplish.."</i>
+			<p>Join our “Uber” Community and speak out your mind. Upload your pictures, share your thoughts and ask more to know more. Talk to our experts, resolve your doubts coz what we cling to may not always be good enough, so chat with us about your ideas and we will find you a way to give shape to that hypothesis crossing your mind. Though it may be any four walls, yet we help you create a home that is “totus tuus”………</p>
+			<i>“Where thou art, that is HOME”</i><br><br>
+			<button type="button" class="btn btn-default">Join</button><br><br>
+			<hr><br><br>
+			<h3>Browse Our Experts</h3>
+			<i>“If you wisely invest in anything, it will remain with you forever”</i>
+			<p>Good Design is forever. And for us design is both an art and a science. Thus, browse our experts; analyze their work and chat with them. Our Experts design with their best efforts according to your choice and comfort so that your room starts talking even before you talk. We believe in determining how a space feels more than how it looks…………</p>
+			<i>“We shape thine ideas and hence thy HOMES”</i><br><br>
+			<button type="button" class="btn btn-default">Browse</button><br><br>
+			<hr><br><br>
+			<h3>Start Your Project</h3>
+			<i>“A new idea, a new thought does not wait for anything”</i>
+			<p>It does not take much strength to do things but it requires a great deal of strength to decide what to do. If you undertake projects in mind, never leave for tomorrow. The beginning is always today, so why to wait, just imagine, gather, connect with the “Uber” community and start afresh. Let us know your requirements and we match you with an expert or you could choose your own expert because our objective is to capture the essence of the space and the spirit of our client…. …….</p>
+			<i>“No money is better spent than what is laid out for your source of happiness – HOME”</i><br><br>
+			<button type="button" class="btn btn-default">Start</button><br><br>
+		</div>
+		<div class="row">
+		</div>
+		<div class="row">
+		</div>
+	</div>
+</div>
+
+<!---------------------------FEEDBACK ----------------- -->
+<div class="feedback">
+	<div id="icon">
+		<a href="#" style="text-decoration:none;">Feedback</a>
+	</div>
+	<div id="feed-content"><div id="fas">
+		<button type="button" id="feed-close" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4>Your Feedback</h4><hr><br>
+		<input type="text" class="form-control" placeholder="Your Name"><br>
+		<input type="email" class="form-control" placeholder="Your Email"><br>
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a role="tab" data-toggle="tab">Problem</a></li>
+			<li><a role="tab" data-toggle="tab">Suggestion</a></li>
+			<li><a role="tab" data-toggle="tab">Compliment</a></li>
+			<li><a role="tab" data-toggle="tab">Other</a></li>
+		</ul><br>
+		<div class="tab-content">
+			<div class="tab-pane fade in active">
+				<textarea class="form-control" placeholder="Please Enter Your Feedback and press submit"></textarea>
+			</div>
+		</div>
+		<br>
+		<button class="btn btn-success" type="button">Submit Feedback</button>
+	</div></div>
+</div>
+
+<!----------------------------FOOTER------------------- -->
+<div id="footer" class="row" style="margin-top:30px;">
+	<div class="col-sm-3" style="font-size:25pt;padding:20px;">
+		<span class="icon-facebook">&nbsp;</span>
+		<span class="icon-googleplus">&nbsp;</span>
+		<span class="icon-twitter">&nbsp;</span>
+	</div>
+	<div class="col-sm-6" style="text-align:center;">
+		<span style="font-size:20px;font-family: 'Yanone Kaffeesatz', sans-serif;">Choose Your Expert II Take Inspirations II Ask for Advice II Talk to fellow Home Owners II Upload Your Creative Ideas II Start Your Project
+		<br>Make Your Spaces the "Uber" Way</span>
+	</div>
+	<div class="col-sm-3" style="font-size:15px;">
+		<p><strong>Contact Us @</strong><br>
+		<span class="icon-pencil"> reachus@makeuber.com</span>&nbsp;&nbsp;<br>
+		<span class="icon-phone">+(91) 9900071655</span></p>
+	</div>
+	<div class="col-sm-12">
+		<hr style="border:1px solid #111;margin-bottom:10px;">
+	</div>
+	<div class="col-sm-10">
+		<ul class="footer-menu">
+			<li><a href="makeuber.html">Home</a></li>
+			<li class="active"><a href="howitworks.html">How It Works</a></li>
+			<li><a href="#">Experts</a></li>
+			<li><a href="ask.html">Ask</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="register.html">Register</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-2">
+		<strong>&copy; 2014 | <a href="#">Privacy Policy</a></strong>
+	</div>
+</div>
+
+</body>
+</html>
